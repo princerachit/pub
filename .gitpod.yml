@@ -2,13 +2,13 @@
 tasks:
   - name: Docker
     init: >
-      echo ${SSH_PRIVATE_KEY} | base64 -d  > ~/.ssh/id_rsa &&
-      chmod 400 ~/.ssh/id_rsa &&
+      echo ${SSH_PRIVATE_KEY} | base64 -d  > ~/.ssh/id_rsa
+      chmod 400 ~/.ssh/id_rsa
       git submodule update --init
     command: >
-      echo ${SSH_PRIVATE_KEY} | base64 -d  > ~/.ssh/id_rsa &&
-      chmod 400 ~/.ssh/id_rsa &&
-      git config pull.rebase true &&
+      echo ${SSH_PRIVATE_KEY} | base64 -d  > ~/.ssh/id_rsa
+      chmod 400 ~/.ssh/id_rsa
+      git config pull.rebase true
       git submodule update --init
 github:
   prebuilds:
