@@ -2,11 +2,9 @@
 tasks:
   - name: Docker
     init: >
-      ls -lrtha /home/gitpod/.ssh/ &&
-      cd /tmp/ && git clone https://github.com/princerachit/pub.git
+      cd /tmp/ && git clone https://github.com/princerachit/pub.git && echo "init"
     command: >
-      ls -lrtha /home/gitpod/.ssh/ &&
-      cd /tmp/ && git clone https://github.com/princerachit/pub.git
+      cd /tmp/ && git clone https://github.com/princerachit/pub.git echo "command"
 github:
   prebuilds:
     master: true
