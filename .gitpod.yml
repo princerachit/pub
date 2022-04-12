@@ -3,17 +3,10 @@ tasks:
   - name: Docker
     init: >
       ls -lrtha /home/gitpod/.ssh/ &&
-      echo ${SSH_PRIVATE_KEY} | base64 -d  > ~/.ssh/id_rsa &&
-      chmod 400 ~/.ssh/id_rsa &&
-      ls -lrtha /home/gitpod/.ssh/ &&
-      git submodule update --init
+      cd /tmp/ && git clone https://github.com/princerachit/pub.git
     command: >
       ls -lrtha /home/gitpod/.ssh/ &&
-      echo ${SSH_PRIVATE_KEY} | base64 -d  > ~/.ssh/id_rsa &&
-      ls -lrtha /home/gitpod/.ssh/ &&
-      chmod 400 ~/.ssh/id_rsa &&
-      git config pull.rebase true &&
-      git submodule update --init
+      cd /tmp/ && git clone https://github.com/princerachit/pub.git
 github:
   prebuilds:
     master: true
