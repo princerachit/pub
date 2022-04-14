@@ -2,9 +2,9 @@
 tasks:
   - name: Docker
     init: >
-      cd /tmp/ && git clone https://github.com/princerachit/pub.git && echo "init"
+      echo "init"
     command: >
-      cd /tmp/ && git clone https://github.com/princerachit/pub.git echo "command"
+      echo "command"
 github:
   prebuilds:
     master: true
