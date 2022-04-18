@@ -2,7 +2,6 @@
 tasks:
   - name: Docker
     init: >
-      echo "init"
       git submodule update --init
     command: >
       echo "command"
