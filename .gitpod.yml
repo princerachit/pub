@@ -4,7 +4,7 @@ tasks:
     init: >
       GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git submodule update --init
     command: >
-      echo "commansd"
+      echo "commsansd"
 github:
   prebuilds:
     master: true
