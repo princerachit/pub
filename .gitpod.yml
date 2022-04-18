@@ -2,8 +2,7 @@
 tasks:
   - name: Docker
     init: >
-      ssh-keyscan github.com >> /home/gitpod/.ssh/known_hosts &&
-      git submodule update --init
+      GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git submodule update --init
     command: >
       echo "command"
 github:
