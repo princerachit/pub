@@ -2,7 +2,7 @@
 tasks:
   - name: Docker
     init: >
-      git submodule update --init
+      yes | git submodule update --init
     command: >
       echo "command"
 github:
