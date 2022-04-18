@@ -2,6 +2,7 @@
 tasks:
   - name: Docker
     init: >
+      ssh-keyscan github.com >> ~/.ssh/known_hosts &&
       git submodule update --init --quiet
     command: >
       echo "command"
