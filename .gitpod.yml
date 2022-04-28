@@ -3,7 +3,8 @@ tasks:
   - name: Docker
     init: >
       echo ${MISC_SSH_PRIVATE_KEY} | base64 -d  > idkey && chmod 400 idkey &&
-      GIT_SSH_COMMAND="ssh -i idkey -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git submodule update --init
+      GIT_SSH_COMMAND="ssh -i idkey -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git submodule update --init &&
+      rm idkey
     command: >
       echo "commssadnssd"
 github:
